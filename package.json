@@ -1,0 +1,22 @@
+{
+  "name": "testes",
+  "version": "1.0.0",
+  "description": "repo para teste de functions",
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nyc mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.5.1",
+    "eslint-config-defaults": "^9.0.0",
+    "mocha": "^6.2.1",
+    "nyc": "^14.1.1",
+    "wallaby": "^1.0.1"
+  }
+}
