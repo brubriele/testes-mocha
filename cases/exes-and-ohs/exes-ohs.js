@@ -13,3 +13,5 @@ function XO(str) {
 console.log(XO('Huhum'))
 
 module.exports = XO
+
+// https://www.codewars.com/kata/exes-and-ohs/train/javascript

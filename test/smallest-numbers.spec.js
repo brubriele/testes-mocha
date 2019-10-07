@@ -1,6 +1,6 @@
 const chai = require('chai');
 const expect = chai.expect;
-const sumTwoSmallestNumbers = require('../cases/sum-array/mysolution/smallest-numbers');
+const sumTwoSmallestNumbers = require('../cases/smallest-numbers/smallest-numbers');
 
 describe('Soma dos menores inteiros', () => {
     describe('Testes para Array vazios, menor que 4 ou negativos', () => {
