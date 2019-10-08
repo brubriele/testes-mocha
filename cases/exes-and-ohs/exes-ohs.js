@@ -1,16 +1,14 @@
 function XO(str) {
-    for (let el in str) {
-        let re = new RegExp(str[el], "gi");
-        // if (str.match(re).length % 2 != 0) {
-        //     return str.length / 2 === str.match(re).length ? true : false
-            
-        // }
-        return str.substr(str.match(re).length === 1)
+ 
+        return str.split("").sort().join("").match(/(.)\1+/gi).map((v, i) => {
+            return typeof v
+        });
+  
 
-    }
 }
 
-console.log(XO('Huhum'))
+
+console.log(XO('xxoxBbooddoooox'))
 
 module.exports = XO
 
