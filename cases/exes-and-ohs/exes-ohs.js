@@ -10,6 +10,13 @@ function XO(str) {
     }
 }
 
+
+// function charTally(input) {
+//     return input.split('').reduce((acc, char) => {
+//       acc[char] = (acc[char] || 0) + 1;
+//       return acc;
+//     }, {});
+//   }
 console.log(XO('Huhum'))
 
 module.exports = XO
