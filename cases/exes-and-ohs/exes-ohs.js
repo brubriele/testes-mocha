@@ -1,7 +1,7 @@
 function XO(str) {
  
         return str.split("").sort().join("").match(/(.)\1+/gi).map((v, i) => {
-            return typeof v
+            return v
         });
   
 
