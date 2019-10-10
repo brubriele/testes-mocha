@@ -1,14 +1,15 @@
 function XO(str) {
- 
-        return str.split("").sort().join("").match(/(.)\1+/gi).map((v, i) => {
-            return typeof v
-        });
-  
-
+       let x = str.split("").sort().join("").match(/(.)\1+/gi);
+       console.log(x)
+       let result = x.filter((v) => {
+           return v
+        //    return v.length % 2 === 0
+        })
+        return result
 }
 
 
-console.log(XO('xxoxBbooddoooox'))
+console.log(XO('xxoobohhhH'))
 
 module.exports = XO
 

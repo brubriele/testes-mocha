@@ -25,12 +25,18 @@ describe('Pair XO', () => {
     });
 
     describe('Pares sort', () => {
-        it('Strins com pares equivalentes e variação de "x" ou "o" - deve retornar: true', () => {
-            expect(XO(ZBzBbbZz)).to.eql(true)
+        it('Strings com pares equivalentes e variação de "x" ou "o" - deve retornar: true', () => {
+            expect(XO('ZBzBbbZz')).to.eql(true)
         });
-        it('Strins com pares não equivalentes e variação de "x" ou "o" - deve retornar: true', () => {
-            expect(XO(ZBzBBbbZz)).to.eql(false)
+        it('Strings com pares não equivalentes e variação de "x" ou "o" - deve retornar: true', () => {
+            expect(XO('ZBzBBbbZz')).to.eql(false)
         });
+        it('Strings com pares equivalentes + sort - deve retornar: true', () => {
+            expect(XO('XoXom')).to.eql(true)
+        });
+        it('Strings com pares entre x || o - deve retornar: false', ()=> {
+            expect(XO('Zzoo')).to.eql(false)
+        })
         
     })
 });
