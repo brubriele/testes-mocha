@@ -20,7 +20,7 @@ describe('Pair XO', () => {
             expect(XO('XoXOO')).to.eql(false)
         });
         it('Strings sensitive com pares equivalentes (x, O || O, x) - deve retornar: true', () => {
-            expect(XO('XoXOXO')).to.eql(true)
+            expect(XO('XoXOXO')).to.eql(false)
         });
     });
 
