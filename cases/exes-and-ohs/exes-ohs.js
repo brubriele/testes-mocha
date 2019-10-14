@@ -12,6 +12,7 @@ function XO(str) {
     }
 }
 
+
 console.log(XO('XO'))
 
 
