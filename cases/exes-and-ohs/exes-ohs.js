@@ -1,19 +1,16 @@
 function XO(str) {
-    const result = [];
-    const testString = str.toLowerCase();
-    const strArr = testString.split("").sort().join("").match(/(.)\1+/g);
-    if (testString === 'ox' || testString === 'xo') {
-        return true
-    } else {
-        let x = strArr.filter((v) => {
-            return v.length % 2 === 0, v
-        })
-        return result.includes(false) || (result.length - 1) < 2 ? false : true
-    }
-}
+    let x = str.match(/x/gi);
+    let o = str.match(/o/gi);
+    return (x && x.length) === (o && o.length);
+  }
 
+//   const XO = str => {
+//     str = str.toLowerCase().split('');
+//     return str.filter(x => x === 'x').length === str.filter(x => x === 'o').length;
+//   }
 
-console.log(XO('XO'))
+console.log(XO('XxoO'))
 
-
+// let str = ""
+// console.log(str != "" ? true : false)
 module.exports = XO
