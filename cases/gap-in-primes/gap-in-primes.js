@@ -1,20 +1,16 @@
+console.time("gap");
 function gap(g, n, m) {
-    let arr = new Array(m + 1).fill(m)
-    let x = arr.map((v, i) => {
+    const isPrime = num => ![...Array(num).keys()].slice(2).map(i => !(num%i)).includes(true) && ![0,1].includes(num)
+    let newM = m > 500 ? m / 5 : m
+    const arr = [...Array(newM)].map((v, i) => {
         return v, i
-    }).slice(n)
-    let newArr = x.filter((number) => {
-        for (let i = 2; i <= Math.sqrt(number); i++) {
-            if (number % i === 0) return false;
-        }
-        return true
-    })
-    let diff = newArr.slice(1).filter(function (n, i) {
-        return n - newArr[i] === g
+    }).slice(n).filter((number) => isPrime(number))
+    console.log(arr)
+    const diff = arr.slice(1).filter((n, i) => {
+        return n - arr[i] === g
     })[0]
-    const flatten = (arr, depth = 1) =>
-        arr.reduce((a, v) => a.concat(depth > 1 && Array.isArray(v) ? flatten(v, depth - 1) : v), []);
-    return flatten([diff - g, diff])
+    return [diff -g, diff].includes(NaN) ? null : [diff -g, diff] 
 }
-console.log(gap(6, 100, 110))
+console.log(gap(2, 1, 50))
+console.timeEnd("gap");
 module.exports = gap
